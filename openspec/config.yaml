@@ -1,0 +1,51 @@
+schema: spec-driven
+
+context: |
+  ## Project
+  AI 課程練習專案，用於學習 OpenSpec 規格驅動開發與 Agent Skills。
+  課程專案包含兩個子專案：
+  - Root project: Node.js ESM，含刻意的 ESLint 違規（訓練用），不應修正
+  - vehicle-mgmt/: 車輛管理 SPA（課程主要交付物）
+
+  ## Tech Stack (vehicle-mgmt)
+  - Frontend: Vite + React 19, React Router v6
+  - UI: shadcn/ui (Tailwind CSS v4), Recharts for charts
+  - Forms: react-hook-form + Zod validation
+  - Mock API: MSW v2 (Service Worker, browser mode only)
+  - State: React Context (AuthContext) + sessionStorage
+
+  ## Tech Stack (root project)
+  - Runtime: Node.js >= 20 (ESM, "type": "module")
+  - Test: Jest 29 with --experimental-vm-modules flag
+  - Lint: ESLint flat config (@eslint/js recommended)
+
+  ## Domain
+  車隊管理系統：車輛（Vehicle）與員工（Employee）的 CRUD，含角色型存取控制（RBAC）。
+  - Roles: admin（全存取）、user（僅儀表板與車輛管理）
+  - Data models:
+    - Vehicle: { id, plateNumber, brand, model, year, status: 'available'|'in-use'|'maintenance', assignedTo }
+    - Employee: { id, name, department, position, email, phone }
+
+  ## Conventions
+  - 繁體中文 UI，程式碼與變數名稱使用英文
+  - Conventional Commits（feat/fix/chore/docs/refactor）
+  - No real backend — all API calls intercepted by MSW at /api/*
+  - New shadcn components installed via: npx shadcn@latest add <component>
+  - openspec CLI path: /c/Users/9108012/AppData/Local/nvm/v22.22.2/openspec
+
+rules:
+  proposal:
+    - Keep proposals under 400 words
+    - Always include a "Non-goals" section in Goals/Non-Goals
+    - Capability names must be kebab-case English (e.g., vehicle-management, not 車輛管理)
+  design:
+    - Document key technical decisions with explicit "why X over Y" rationale
+    - List data model shapes when introducing new entities
+  specs:
+    - Every requirement must have at least one scenario with WHEN/THEN format
+    - Use SHALL/MUST for normative requirements; avoid "should" or "may"
+    - Scenario names should be in Traditional Chinese to match UI language
+  tasks:
+    - Break tasks into chunks completable in under 30 minutes
+    - Group tasks by feature layer (setup → mock API → pages → integration)
+    - Reference the specific file path for each task where applicable
