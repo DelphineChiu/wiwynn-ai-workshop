@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(openspec new *)",
+      "Bash(npx openspec *)",
+      "Bash(where openspec *)",
+      "Bash(where npx *)"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/c/Users/9108012/AppData/Local/nvm/v22.22.2/openspec instructions *)",
+      "Bash(export PATH=\"/c/Users/9108012/AppData/Local/nvm/v22.22.2:$PATH\")",
+      "Bash(npm --version)",
+      "Bash(npm create *)",
+      "Bash(npm install *)",
+      "Bash(npx shadcn@latest init --defaults)",
+      "Bash(npx msw *)",
+      "Bash(npx shadcn@latest add button card dialog form input label select table badge alert --yes)",
+      "Bash(npx shadcn@latest add form --yes)",
+      "Bash(npx shadcn@latest add chart --yes)",
+      "Bash(npm run *)",
+      "Bash(/c/Users/9108012/AppData/Local/nvm/v22.22.2/openspec list *)",
+      "Bash(Get-ChildItem -Path . -File)",
+      "Bash(Select-Object Name)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(npm test *)"
+    ]
+  }
+}
