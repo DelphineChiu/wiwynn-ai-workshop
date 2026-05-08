@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Ensure nvm-managed node/npm is available in git hook environment
+export PATH="/c/Users/9108012/AppData/Local/nvm/v22.22.2:$PATH"
+
 echo "Running lint and tests in parallel..."
 
 LINT_OUT=$(mktemp)

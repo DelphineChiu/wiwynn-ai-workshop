@@ -26,6 +26,7 @@ export default [
     },
   },
   {
-    ignores: ["node_modules/", "coverage/"],
+    // vehicle-mgmt/ has its own eslint setup; echo.js contains intentional violations for training
+    ignores: ["node_modules/", "coverage/", "vehicle-mgmt/", "src/skills/echo.js"],
   },
 ];
