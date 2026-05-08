@@ -1,3 +1,61 @@
-node_modules
+# Dependencies
+node_modules/
+vehicle-mgmt/node_modules/
+
+# Build output
+dist/
+build/
+vehicle-mgmt/dist/
+
+# Environment variables
 .env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
+*.swo
+
+# Test coverage
+coverage/
+
+# ── AI Agent tool directories ──────────────────────────────────────────────
+# .claude/ and openspec/ are intentionally tracked in version control.
+# All other AI tool directories are ignored.
+.agent/
+.amazonq/
+.augment/
+.bob/
+.cline/
+.clinerules/
+.codebuddy/
+.codex/
+.continue/
+.cospec/
+.crush/
+.cursor/
+.factory/
+.forge/
+.gemini/
+.github/
+.iflow/
+.junie/
+.kilocode/
+.kiro/
+.lingma/
+.opencode/
+.pi/
+.qoder/
+.qwen/
+.roo/
+.trae/
+.windsurf/
