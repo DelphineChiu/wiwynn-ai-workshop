@@ -5,7 +5,8 @@
       "Bash(npx openspec *)",
       "Bash(where openspec *)",
       "Bash(where npx *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(git credential-manager *)"
     ]
   }
 }
