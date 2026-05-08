@@ -4,7 +4,8 @@
       "Bash(openspec new *)",
       "Bash(npx openspec *)",
       "Bash(where openspec *)",
-      "Bash(where npx *)"
+      "Bash(where npx *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
